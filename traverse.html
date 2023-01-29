@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse of Array</title>
+    <style>
+        p{
+            color: purple;
+            font-size: 1.5rem;
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>click</button> <br>
+    <p></p>
+    <script>
+        let arr = [1, 2, 3, 41, 5, 6, 10, 11, 12]
+        for(let i= 0; i< arr.length; i++){
+            document.write(`${i} value of array is ${arr[i]} <br>`)
+        }
+
+        const inputField = document.querySelector('input[type="text"]');
+        const button = document.querySelector('button');
+        const showData = document.querySelector('p');
+
+        button.addEventListener('click', () => {
+            showData.classList.add('active');
+            let userValue = inputField.value;
+            if(userValue>arr.length){
+                showData.innerHTML = 'Please enter a valid number';
+            }else if(showData.innerHTML === 'undefined'){
+                console.log('1')
+            }else{
+                showData.innerHTML = arr[userValue];
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = ['a', 'b', 'c', 'd'];
+        // let count = 0;
+        // let newArray = [];
+        // for (let i = arr.length - 1; i >= 0; i--) {
+        //     newArray[count] = arr[i];
+        //     count++;
+        // }
+        // newArray = newArray.toString();
+        // newArray = newArray.split(',').join('');
+        // console.log(newArray)
+
+        let arr = [];
+        let arrSize = arr.length;
+        let string = 'abc';
+
+        function push(value){
+            value = value.split('');
+            for(let i =value.length-1; i>=0; i--){
+                arr[arrSize] = value[i];
+                arrSize++;
+            }
+        }
+        
+        function pop(){
+            // arr = arr.join();
+            console.log(arr.join(""))
+        }
+        push(string);
+        pop();
+
+        // arr = arr.toString();
+        // arrt = arr.split(',').join();
+        // console.warn(arrt);
+
+    </script>
+</body>
+
+</html>

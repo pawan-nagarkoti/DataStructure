@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="text" id="myInput">
+    <button class="pushBtn">Push</button>
+    <button class="popBtn">Pop</button>
+    <button class="showData">Show Data</button>
+
+    <script>
+        let pushButton = document.querySelector(".pushBtn");
+        let popButton = document.querySelector(".popBtn");
+        let showData = document.querySelector(".showData");
+        let arr = [];
+        maxValue = 4;
+        arraySize = arr.length;
+
+        pushButton.addEventListener('click', () => {
+            let inputBox = document.querySelector("input[type='text']").value;
+            if (arraySize >= maxValue) {
+                alert('stack is full');
+            } else if (inputBox === null || inputBox === "") {
+                alert('Please fill the data in input box')
+            } else {
+                arr[arraySize] = inputBox;
+                arraySize++;
+                console.log(arr)
+            }
+            inputBox = document.querySelector("input[type='text']").value = '';
+        });
+
+        popButton.addEventListener('click', () => {
+            if (arraySize === 0) {
+                alert('stack is empty');
+            } else {
+                arraySize--;
+                arr.length = arraySize;
+                console.log(arr);
+            }
+        });
+
+        showData.addEventListener('click', () => {
+            if (arraySize === 0) {
+                alert('Data is not availabe inside stack')
+            } else {
+                arr.forEach((value) => {
+                    console.log(value);
+                })
+            }
+        });
+
+    </script>
+</body>
+
+</html>

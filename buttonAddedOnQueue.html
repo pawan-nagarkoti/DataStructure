@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button class="add-element">Add Element</button>
+    <button class="remove-element">Remove Element</button>
+    <button class="display-element">Display</button>
+    <button class="front-element">Get Front Element</button>
+    <button class="rear-element">Get Rear Element</button>
+    <p>show the data is here!</p>
+
+    <script>
+        let arr = [], arrSize = arr.length, maxValue = 5;
+        showData = document.querySelector('p');
+
+        // This function is used for get the data from input box then insert into array.
+        let addElement = document.querySelector('.add-element');
+        addElement.addEventListener('click', () => {
+            let input = document.querySelector("input[type='text']").value;
+            arr[arrSize] = input;
+            // showData.innerHTML = arr[arrSize];
+            arrSize = arrSize + 1;
+            document.querySelector("input[type='text']").value = 'g';
+
+        });
+
+        // Remove element inside an array.
+        let removeElement = document.querySelector('.remove-element');
+        removeElement.addEventListener('click', () => {
+            console.log(arr)
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr.length = arr.length - 1;
+            console.log(arr)
+        });
+
+        // Display all the element inside an array.
+        let displayElement = document.querySelector('.display-element');
+        displayElement.addEventListener('click', () => {
+            console.log(arr)
+            arr.map((value) => {
+                // console.log(value)
+                // showData.innerHTML = value;
+            });
+        });
+
+        // Get the value of rear element in a queue
+        let frontElement = document.querySelector('.front-element');
+        frontElement.addEventListener('click', () => {
+            console.log(arr[0]);
+        });
+
+        // Get the value of front element in a queue
+        let rearElement = document.querySelector('.rear-element');
+        rearElement.addEventListener('click', () => {
+            console.log(arr[arr.length - 1]);
+        });
+
+    </script>
+</body>
+
+</html>

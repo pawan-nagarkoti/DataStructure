@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // {23: 1, 24: 2}
+        const arr = [
+            {
+                name: 'pawan',
+                lastname: 'singh',
+                age: 24,
+            },
+            {
+                name: 'mohit',
+                lastname: 'singh',
+                age: 21
+            },
+            {
+                name: 'pawan',
+                lastname: 'singh',
+                age: 24,
+            },
+            {
+                name: 'mohit',
+                lastname: 'singh',
+                age: 20
+            }
+        ]
+
+        // const reduceArray = arr.reduce((acc, item) => {
+        //     if (acc[item.age]) {
+        //         // acc[item.age] += 1;
+        //         acc[item.age] = ++acc[item.age]
+        //     } else {
+        //         acc[item.age] = 1;
+        //     }
+        //     return acc
+        // }, {});
+        // console.log(reduceArray)
+
+
+        const username = arr.reduce((acc, item) => {
+            acc.push(item.name);
+            return acc;
+        }, [])
+        console.log(username)
+    </script>
+</body>
+
+</html>

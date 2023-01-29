@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Queue implement with array -->
+    <!-- <script>
+        let arr = [];
+        arrSize = arr.length;
+        maxValue = 5;
+
+        function insertElm(value) {
+            if (arrSize >= maxValue) {
+                alert('queue is full');
+                return;
+            } else {
+                arr[arrSize] = value;
+                arrSize++;
+            }
+        }
+        function display() {
+            console.log(arr)
+        }
+        function removeElm() {
+            if(arrSize>0){
+                for(let i=0; i<arr.length; i++){
+                    arr[i]=arr[i+1];
+                }
+                arr.length= arr.length-1;
+            }else{
+                alert('queue is empty');
+                return;
+            }
+        }
+
+        insertElm(10);console.log
+        insertElm(20);
+        insertElm(30);
+        display();
+        removeElm();
+        removeElm();
+        removeElm();
+        removeElm();
+        // display(); 
+    </script> -->
+    <!-- Stack implement with array -->
+    <script>
+        let arr = [];
+        maxValue = 5;
+        arrSize = arr.length;
+
+        function push(value){
+            arr[arrSize] = value;
+            arrSize++;
+        }
+        function pop(){
+            arrSize--;
+            arr.length = arr.length -1;
+            console.log(arr.length)
+        }
+        function display(){
+            console.log(arr);
+            document.write(arr)
+            console.log(arr.length)
+        }
+
+        push(10);
+        push(20);
+        push(30);
+        pop();
+        pop();
+        push(20);
+
+        push(20);
+        push(20);
+        push(20);
+        push(20);
+        display();
+    </script>
+</body>
+
+</html>

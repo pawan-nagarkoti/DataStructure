@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 2, m=3, count=0;
+        function fun(n,m){
+            if(m === 0 || m===1) return 1;
+            const a = n * fun(n,m-1);
+            const c = a*n;
+            return c;
+        }
+        console.log(fun(n,m));
+
+        // console.log(powerNo(1,2,3,4));
+
+        // function powerNo(a,b,c,d) {
+        //     if(b==0) return 1;
+        //     console.log(a)
+        //     return a * powerNo(a,b-1,c,d);
+        // }
+        // function natural(n){
+        //     if(n==0) return 1;
+        //     return n * natural(n-1);
+        // }
+        // let a = natural(5);
+        // console.log(a);
+
+        // let answer = 0;
+        // for(let i = 0; i<=5; i++){
+        //     answer = answer + i;
+        // }
+        // console.log(answer)
+    </script>
+</body>
+
+</html>

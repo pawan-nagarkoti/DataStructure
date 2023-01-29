@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting with Array (Using Bubble short)</title>
+</head>
+<body>
+    <script>
+        let arr = [5,4,2,8,1];
+        document.write( arr); 
+        // for(let i = 0; i < arr.length; i++){
+        //     for(let j = 0; j < arr.length; j++){
+        //         console.log(arr)
+        //         if(arr[j] > arr[j + 1]){
+        //             let temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+
+        let i = 0;
+        while(i < arr.length){
+            let j = 0;
+            while(j < arr.length){
+                if(arr[j] > arr[j + 1]){
+                    let temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+                j++;
+            }
+            i++;
+        }
+
+        console.log(arr)
+    </script>
+</body>
+</html>
